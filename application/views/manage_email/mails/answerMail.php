@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                font-family: texta;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div style="font-size: 1.5em;">
+            <span style="font-weight: bold;"><?php echo "$user"; ?></span> elaboro la respuesta el 
+            <span style="font-weight: bold;"><?php echo $curDate->format("d-m-Y H:i"); ?></span> del documento 
+            <span style="font-weight: bold;"><?php echo "$controlFolio"; ?></span> el cual contiene la siguiente información:
+            <ul>
+                <li>Asunto: <span style="font-weight: bold;"><?php echo "$subject"; ?></span></li>
+                <li>Tema: <span style="font-weight: bold;"><?php echo "$theme"; ?></span></li>
+                <li>Vence: <span style="font-weight: bold;"><?php echo "$expiration"; ?></span></li>
+                <li>Comentario: <span style="font-weight: bold"><?php echo "$comment"?></span></li>
+            </ul>
+        </div>
+        
+        <p style="font-size: 1.5em;">
+            Puedes revisarlo entrando al siguiente enlace: 
+            <br />
+            <a href="<?php echo base_url() . "login"; ?>" style="color: #FF8300; text-decoration: none; margin-left: 15px;">
+                <?php echo base_url() . "login"; ?>
+            </a>
+        </p>
+        
+        
+        <?php 
+        $this->load->view("tpl_general/signatureMngMail");
+        ?>
+    </body>
+</html>

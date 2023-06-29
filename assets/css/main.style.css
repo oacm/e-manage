@@ -1,0 +1,513 @@
+/*
+Estilos principales para darle un tema de Fénix a la pagina
+*/
+
+body{
+    color      : #000;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main_container{
+    background-color: #00563F;
+}
+
+.site_title{
+    font-weight : inherit;
+    font-size   : inherit;
+    line-height : inherit;
+    padding-left: 0px;
+}
+
+.site_title i{
+    border        : inherit;
+    padding       : 0px;
+    border-radius : 0px;
+    vertical-align: middle;
+    color         : #00563f;
+    margin-top    : 0px;
+    font-size     : 40px;
+    margin-left   : 10px;
+    margin-right  : 10px; 
+}
+
+.nav_title img{
+    width : 151px;
+    margin: 10px 0 10px;
+}
+
+.nav-sm .navbar.nav_title a i {
+    margin   : 7px 22px;
+    font-size: 40px;
+}
+
+.left_col {
+    background: #00563F;
+}
+
+.profile_info span {
+    font-size: 20px;
+    color    : #fff;
+}
+
+.profile_info h2 {
+    font-size: 16px;
+    color    : #fff;
+}
+
+.menu_section h3{
+    font-size  : 15px;
+    text-shadow: inherit;
+}
+
+.nav.side-menu>li>a {
+    margin-bottom: 0px;
+}
+
+.nav.side-menu>li.active>a {
+    text-shadow: inherit;
+    background : #ff8200;
+}
+
+.nav.side-menu>li:hover {
+    background-color: #00b140;
+    border-right    : 5px solid #1ABB9C;
+}
+
+.nav.child_menu {
+    background-color: #00563f;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.nav-md ul.nav.child_menu li:before{
+    background-color: #fff;
+}
+
+.nav-md ul.nav.child_menu li:after{
+    border-left: 1px solid #fff;
+}
+
+td.center-data-cell{
+    text-align: center;
+}
+
+td.cursor-pointer-none{
+    cursor: default;
+}
+
+footer{
+    background: #F7F7F7;
+}
+
+.icon{
+    margin-right: 5px;
+}
+
+.login_icon_fenix{
+    width: 130px;
+}
+
+.form-group-sm{
+    display      : table;
+    width        : 100%;
+}
+
+.form-group-sm div, .form-group-sm label{
+    margin-bottom: 5px;
+}
+
+.form-group-sm .alignright{
+    margin-left: auto;
+}
+
+.form-group-sm .select2-container--default .select2-selection--single,.form-group-sm .select2-container--default .select2-selection--multiple{
+    min-height  : 30px;
+    border-color: #CCC;
+    font-size   : 12px;
+}
+
+.form-group-sm .select2-selection__arrow{
+    height: 30px;
+}
+
+.form-group-sm .select2-container--default .select2-selection--single .select2-selection__rendered{
+    padding-top: 0px;
+}
+
+.select2-container{
+    font-size: 12px;
+}
+
+.cell-empty::after{
+    content   : ".";
+    visibility: hidden;
+}
+
+.img-circle.profile_img{
+    width : 74px;
+    height: 74px;
+}
+
+.user-profile aside{width:29px;height:29px;border-radius:50%;margin-right:10px;float: left;}
+
+/*Fin de los estilos principales del tema de Fénix.*/
+
+
+/* Estilos de la pagina de Bienvenida */
+
+.welcome-title h2{
+    float     : clear; 
+    text-align: center; 
+    font-size : 4em; 
+    margin-top: 0px;
+}
+
+.welcome-page{
+    text-align: center;
+}
+
+.welcome-user-img-config{
+    width: 300px;
+    height: 300px;
+    margin: 0px auto;
+}
+
+.welcome-page p{
+    font-size : 2em;
+    margin-top: 5px;
+}
+
+/* Menu bar buttons */
+.top_tiles .btn-app{
+    display: inline-block;
+}
+
+.vMenu-button{
+    width      : 100px;
+    height     : 100px;
+    text-align : center;
+    box-shadow : 0px 0px 5px #ddd inset, 0px 0px 1px #ddd;
+    border     : 1px solid #aaa;
+    float      : left;
+    margin-left: 5px;
+}
+
+.vMenu-button:hover{
+    background: rgba(238,238,238,1);
+    color     : #999;
+    border    : 1px solid #CCC;
+    box-shadow: 0px 0px 2px #999;
+}
+
+.vMenu-button .icon{
+    width   : inherit;
+    height  : 66%;
+    position: inherit;
+    right   : inherit;
+    top     : inherit;
+}
+
+.vMenu-button .icon i{
+    line-height: normal;
+    margin-top : 5px;
+}
+
+.vMenu-button:hover .icon{
+    color: #999;
+}
+
+.vMenu-button:hover .icon i{
+    color: #999;
+}
+/*  End Menu buttons  */
+
+/* attachment */
+.attachment{
+    display    : inline-block;
+    margin-top : 0px;
+    border-left: 1px dotted;
+}
+
+.attachment .btn-group{
+    margin-left  : 5px;
+    margin-bottom: 5px;
+}
+
+.attach-content > div:first-child{
+    margin-left: 26%;
+}
+/* END attachment */
+
+/* Thumbnail */
+
+.thumbnail .caption {
+    text-align: center;
+    padding   : 0px;
+    height    : 33%;
+}
+
+.caption b{
+    font-size : 1em;
+    display   : block;
+    margin-top: 5px;
+}
+
+.caption span{
+    display  : block;
+    font-size: .8em;
+}
+
+.attach-file{
+    height: inherit;
+}
+
+.attach-file .image{
+    height: inherit;
+}
+
+.attach-file .mask{
+    height: 100%;
+}
+
+.attach-file .tools{
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+}
+
+/* END Thumbnail */
+
+/* Cursor table picker */
+
+.panel-go-to{
+    position   : relative;
+    z-index    : -100000;
+    visibility : hidden;
+}
+
+.cursor-picker tbody tr{
+    cursor: pointer;
+}
+/* Cursor table picker */
+
+/*Time Line con clase WIZARD*/
+
+.history-timeline{
+    white-space:nowrap;
+    overflow   :auto;
+}
+
+.history-timeline ul.wizard_steps{
+    list-style: inherit;
+    position  : inherit;
+    width     : inherit;
+    padding   : 0px;
+}
+
+.history-timeline ul.wizard_steps li{
+    display: inline-block;
+    width  : 200px;
+}
+
+.history-timeline ul.wizard_steps li a:before{
+    top: 18px;
+}
+
+.history-timeline ul.wizard_steps li:hover{
+    display: inline-block;
+}
+
+/*Time Line con clase WIZARD*/
+
+/* Layer */
+.layer-loading{
+    display         : none;
+    position        : absolute;
+    width           : 100%;
+    height          : 100%;
+    top             : 0%;
+    left            : 0%;
+    background-color: rgba(0,0,0,.7);
+    z-index         : 10;
+    overflow        : hidden;
+    text-align      : center;
+    color           : white;
+    
+    -webkit-animation-name    : expand-layer;
+    -webkit-animation-duration: 0.4s;
+    animation-name            : expand-layer;
+    animation-duration        : 0.4s;
+}
+
+@-webkit-keyframes expand-layer {
+    from {top:50%; left:50%; opacity:0; width: 0%; height: 0%;}
+    to {top:0%; left:0%; opacity:1; width: 100%; height: 100%;}
+}
+
+@keyframes expand-layer {
+    from {top:50%; left:50%; opacity:0; width: 0%; height: 0%;}
+    to {top:0%; left:0%; opacity:1; width: 100%; height: 100%;}
+}
+/* End layer*/
+
+/*FORM DATA*/
+.form-horizontal .form-label-left{
+    text-align: left;
+}
+
+.form-horizontal .form-label-right{
+    text-align: right;
+}
+
+.form-horizontal .info-doc-label{
+    text-align: center;
+}
+
+.margin-bottom-0{
+    margin-bottom: 0px;
+}
+
+.select2-container{
+    z-index: 10000;
+}
+
+.daterangepicker.dropdown-menu {
+    z-index: 10000;
+}
+
+.btn.btn-active{
+    background-color: #eee;
+    color           : #444;
+    border-color    : #999;
+    box-shadow      : inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+.comment-area{
+    height       : 185px;
+    border       : 1px solid #ccc;
+    border-radius: 3px;
+    width        : 100%;
+    padding      : 5px;
+}
+
+.label-form-left{
+    padding-right: 0px; padding-left: 0px; text-align: left !important;
+}
+
+.attachment-left-aling{
+    margin-left: 10px;
+}
+
+.attachment-left-aling-22{
+    margin-left: 22px;
+}
+
+.info-progress{
+    color: #1ABB9C;
+}
+
+.container-activate{
+    display: none;
+}
+
+/* FORM DATA */
+/*Estilos de Frame para Power BI */
+.reports-bi{
+    margin: 0px 3.5%;
+    width: 97%;
+    height: 600px;
+}
+/*Estilos de Frame para Power BI */
+
+/*Estilos de Button en conjunto de acciones*/
+.btn-dropdown{
+    margin-top: -5px;
+}
+
+.btn-dropdown button:nth-child(2){
+    margin-right: 5px;
+}
+
+.x_title .btn{
+    float: right;
+}
+
+.x_title .btn-default span{
+    color: #333;
+}
+
+.btn-toggle .btn-text{
+    display    : none;
+    margin-left: 5px;
+}
+
+.btn-toggle:hover .btn-text{
+    display                   : inline-block;
+    -webkit-animation-name    : animatebtntoggle;
+    -webkit-animation-duration: 0.4s;
+    animation-name            : animatebtntoggle;
+    animation-duration        : 0.4s;
+}
+
+@-webkit-keyframes animatebtntoggle {
+    0%   {opacity :0;}
+    100% {opacity :1;}
+}
+
+@keyframes animatebtntoggle {
+    0%   {opacity :0;}
+    100% {opacity :1;}
+}
+
+/*Estilos de Button en conjunto de acciones*/
+/* CANVAS VIEWER */
+#viewerPDF{
+    /*position: absolute;*/
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    /*display: none;*/
+}
+/* CANVAS VIEWER */
+
+/*Config Panel*/
+
+.user-img-config{
+    width : 300px;
+    height: 300px;
+    float : left;
+}
+
+.user-img-config > .profile_img, .welcome-user-img-config > .profile_img{
+    width   : 84%;
+    height  : 84%;
+    margin  : 20px 25px;
+    overflow: hidden;
+}
+
+.user-img-config+div{
+    margin-top: 20px;
+}
+
+.profile_img > section, .welcome-user-img-config > section, .user-profile section{
+    width              : 100%;
+    height             : 100%;
+    border             : 1px solid #000;
+    border-radius      : 50%;
+    overflow           : hidden;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+}
+
+/*Config Panel*/
+@media (max-width: 1200px){
+    .welcome-title h2{
+        width    : 100% !important;
+        font-size: 2em!important;
+    }
+}
+
+@media (min-width: 768px){
+    .form-horizontal .form-label-left{
+        text-align: left;
+    }
+}
