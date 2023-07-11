@@ -378,18 +378,18 @@ class MainCtr extends VX_Controller
    
     public function saveData()
 {
-    $preciosFile = $_FILES['preciosFile'];
-    $tarifasFile = $_FILES['tarifasFile'];
-    $horariosFile = $_FILES['horariosFile'];
-    $generadorFile = $_FILES['generadorFile']; 
+    //$preciosFile = $_FILES['preciosFile'];
+      $tarifasFile = $_FILES['tarifasFile'];
+    // $horariosFile = $_FILES['horariosFile'];
+    // $generadorFile = $_FILES['generadorFile']; 
     $ofertaId = $_POST['ofertaId'];
    
 
-    $this->mainctrdao->savePrecios($preciosFile);
-    $this->mainctrdao->saveTarifas($tarifasFile);
-    $this->mainctrdao->saveHorarios($horariosFile); 
-    $this->mainctrdao->saveGenerador($generadorFile, $ofertaId);
-    $this->mainctrdao->saveSeguimiento($ofertaId);
+   // $this->mainctrdao->savePrecios($preciosFile);
+      $this->mainctrdao->saveTarifas($tarifasFile);
+    // $this->mainctrdao->saveHorarios($horariosFile); 
+    // $this->mainctrdao->saveGenerador($generadorFile, $ofertaId);
+    // $this->mainctrdao->saveSeguimiento($ofertaId);
     
     
     
@@ -459,9 +459,6 @@ public function saveContrato()
     echo json_encode($response);
 }
 
-
-
-
 public function generarWord() {    
     if(isset($_POST['word'])) {
         $params = $this->input->post();
@@ -518,6 +515,15 @@ public function downloadContrado() {
          unlink($tempFilePath);      
 }
 
+
+public function subirtarifa()
+{
+    $tarifasFile = $_FILES['tarifasFile'];   
+    $this->mainctrdao->saveTarifas($tarifasFile);
+ 
+    return  $res["status"] = "success";
+    echo json_encode($res);
+}
 
 public function validarSeguimiento()
 {
@@ -1608,3 +1614,4 @@ public function viewDeal()
 
 
 }
+

@@ -160,24 +160,15 @@ public function saveDeal($userData, $params) {
 }
     
     public function getDeals(){
-        $db = " (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.us-ashburn-1.oraclecloud.com))(connect_data=(service_name=gfdc63efe9c5efc_adhwfenix_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))" ;
-        $connect = oci_connect("DWHFENIX", "k2P#ja4AP4_j", $db);
-        if (!$conn) {
-            $m = oci_error();
-            echo $m['message'], "\n";
-         } else {
-            print "Connected to Oracle!";
-         }
-         
-
-        /*$clients=$this->db->query("SELECT oc.nombre AS cliente, o.nombre AS oferta, o.folio AS fol, oe.estado, IFNULL(op.paso,'--') AS paso, o.ofertaId, oe.estadoId, op.pasoId, oc.clienteId FROM of_ofertas o
+      
+        $clients=$this->db->query("SELECT oc.nombre AS cliente, o.nombre AS oferta, o.folio AS fol, oe.estado, IFNULL(op.paso,'--') AS paso, o.ofertaId, oe.estadoId, op.pasoId, oc.clienteId FROM of_ofertas o
             INNER JOIN of_estados oe ON oe.estadoId = o.estado
             LEFT JOIN of_pasos op ON op.pasoId = o.paso
             INNER JOIN of_clientes oc ON oc.clienteId = o.clienteid
             WHERE o.activo = 1
             GROUP BY oc.clienteId, o.ofertaId
-            ORDER BY oc.nombre, o.nombre");*/
-        return [];
+            ORDER BY oc.nombre, o.nombre");
+       return $clients->result_array();
     }
 
 

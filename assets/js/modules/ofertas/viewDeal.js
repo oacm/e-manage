@@ -476,14 +476,14 @@
         
         
         $("#subir").click(function (event) {
-            var preciosFile = $("#bprecios")[0].files[0];
-            var tarifasFile = $("#btarifas")[0].files[0];
-            var horariosFile = $("#bdatoshorarios")[0].files[0];
-            var generadorFile = $("#bgenerador")[0].files[0];
+            //var preciosFile = $("#bprecios")[0].files[0];
+             var tarifasFile = $("#btarifas")[0].files[0];
+            // var horariosFile = $("#bdatoshorarios")[0].files[0];
+            // var generadorFile = $("#bgenerador")[0].files[0];
             var ofertaId = $("#ofertaId").val();
         
         
-            if (!preciosFile && !tarifasFile && !horariosFile && !generadorFile) {
+            if (!horariosFile && !generadorFile) {
                 alert("Debe seleccionar los archivos.");
                 return;
             }
@@ -491,35 +491,13 @@
             var confirmar = confirm("¿Está seguro de subir los archivos?");
         
             if (confirmar) {
-                // window.location.href = window.location.origin + "/e-manage/module/deal/deals";
                 $('#loader').show();
         
-                var maxSize = 5 * 1024 * 1024;
-                if (preciosFile && preciosFile.size > maxSize) {
-                    alert("El archivo de precios excede el tamaño máximo permitido.");
-                    return;
-                }
-                if (horariosFile && horariosFile.size > maxSize) {
-        
-                    alert("El archivo de horarios excede el tamaño máximo permitido.");
-                    return;
-                }
-        
-                if (tarifasFile && tarifasFile.size > maxSize) {
-                    alert("El archivo de tarifas excede el tamaño máximo permitido.");
-                    return;
-                }
-        
-                if (generadorFile && generadorFile.size > maxSize) {
-                    alert("El archivo de generador excede el tamaño máximo permitido.");
-                    return;
-                }
-        
                 var formData = new FormData();
-                formData.append('preciosFile', preciosFile);
+                //formData.append('preciosFile', preciosFile);
                 formData.append('tarifasFile', tarifasFile);
-                formData.append('horariosFile', horariosFile);
-                formData.append('generadorFile', generadorFile);
+                // formData.append('horariosFile', horariosFile);
+                // formData.append('generadorFile', generadorFile);
                 formData.append('ofertaId', ofertaId);
                 $.ajax({
                     url: 'saveData',
@@ -528,8 +506,7 @@
                     processData: false,
                     contentType: false,
                     beforeSend: function () {
-                      // Antes de enviar la solicitud AJAX
-                      // Puedes mostrar un mensaje de carga o realizar otras acciones si es necesario
+                        
                     },
                     success: function (data) { 
                       $('#loader').hide();

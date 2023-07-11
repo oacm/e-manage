@@ -114,3 +114,45 @@ function viewDeal(ofertaId) {
         }
     });*/
 }
+
+$("#subir").click(function (event) {
+    var tarifasFile = $("#btarifas")[0].files[0];
+  
+    if (!tarifasFile) {
+        alert("Debe seleccionar los archivos.");
+        return;
+    }
+
+    var confirmar = confirm("¿Está seguro de subir el archivo?");
+
+    if (confirmar) {
+        $('#loader').show();
+
+        var formData = new FormData();
+        formData.append('tarifasFile', tarifasFile);
+  
+        $.ajax({
+            url: 'subirtarifa',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            beforeSend: function () {
+                
+            },
+            success: function (data) { 
+              $('#loader').hide();
+              location.reload();
+            },
+            error: function () {
+              $('#loader').hide();
+              alert("Ocurrió un error al guardar el archivo. Por favor, inténtelo de nuevo más tarde.");
+            },
+            complete: function () {
+              $('#loader').hide();
+            }
+          });
+      
+    }
+});
+

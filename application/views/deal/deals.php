@@ -8,6 +8,10 @@
             data-target="#nuevaOferta">
             <span class="glyphicon glyphicon-pencil"></span> Nueva Oferta
         </button>
+        <button type="button" class="btn btn-lg btn-default" id="nuevatarifa" data-toggle="modal"
+    data-target="#nuevaTarifa">
+    <span class="glyphicon glyphicon-pencil"></span> Subir Tarifa
+</button>
         <?php
             if ($vMenu["render"]) {
                 $this->load->view("main/vMenu", $vMenu["data"]);
@@ -118,6 +122,7 @@
     </nav>
     <?php endif; ?>
 </div>
+
 <div class="modal fade" id="nuevaOferta" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -161,6 +166,71 @@
     </div>
 </div>
 
+<div class="modal fade" id="nuevaTarifa" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Nuevas Tarifas</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                            <span class="btn btn-primary btn-file">
+                                Archivo <input accept=".xls,.xlsx,.csv" name="btarifas" type="file" class="hidden"
+                                    id="btarifas" onchange="updateFileName(this)">
+                            </span>
+                        </label>
+                        <input class="form-control" id="tarifas_captura" readonly="readonly" name="tarifas_captura"
+                            type="text" value="">
+                    </div>
+                    <button type="button" id="subir" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateFileName(input) {
+        var fileName = input.value.split("\\").pop();
+        document.getElementById("tarifas_captura").value = fileName;
+    }
+</script>
+
+
+<style>
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.loader-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loader-text {
+    font-size: 24px;
+    color: white;
+}
+</style>
+<div id="loader">
+    <div class="loader-content">
+        <span class="loader-text">Cargando...</span>
+        <div class="loader-spinner"></div>
+    </div>
+</div>
 
 <!-- // Modal  oferta
 <div class="modal fade" id="nuevaOferta" role="dialog">
@@ -212,5 +282,3 @@
         </div>
     </div>
 </div> -->
-
-
